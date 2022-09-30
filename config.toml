@@ -1,4 +1,4 @@
-baseURL = 'http://redbeardandcurly.com/'
+baseURL = 'https://redbeardandcurly.com/'
 languageCode = 'en-us'
 title = 'Red Beard and Curly'
 theme = 'redbeard'
