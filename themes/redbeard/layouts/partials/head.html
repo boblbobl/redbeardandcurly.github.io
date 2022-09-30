@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{{ with .Site.Title }}<title>{{ . }}</title>{{ end }}
+{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
+<link rel="stylesheet" href="{{ "css/font-awesome.min.css" | absURL }}">
+<link rel="stylesheet" href="{{ "css/bigger-picture.css" | absURL }}">
+<link href="{{ "css/default.css" | absURL }}" rel="stylesheet">
+{{ partial "favicon.html" . }}
+{{ with .OutputFormats.Get "RSS" }}
+  {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
+{{ end }}

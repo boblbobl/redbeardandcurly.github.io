@@ -1,0 +1,28 @@
+baseURL = 'http://redbeardandcurly.com/'
+languageCode = 'en-us'
+title = 'Red Beard and Curly'
+theme = 'redbeard'
+
+[permalinks]
+    posts = "/:year/:month/:day/:title/"
+    pages = "/:title/"
+
+[params]
+  description = "Creative ideas and inspirations by maker and photographer Lars Diget"
+  copyright = "&copy;2022 Lars Diget"
+  sidebarAbout = [
+    "Creative ideas and inspirations by maker and photographer Lars Diget"
+  ]
+  # Nav links in the side bar
+  [[params.navlinks]]
+  name = "Home"
+  url = "/"
+  home = true
+
+  [[params.navlinks]]
+  name = "About"
+  url = "about/"
+
+  [params.social]
+  twitter       = "https://twitter.com/boblbobl"
+  linkedin      = "https://www.linkedin.com/in/boblbobl/"

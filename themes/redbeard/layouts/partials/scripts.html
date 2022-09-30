@@ -1,0 +1,36 @@
+<script src="{{ "js/jquery.min.js" | absURL }}"></script>
+<script src="{{ "js/bootstrap.min.js" | absURL }}"></script>
+
+
+<script src="{{ "js/masonry.pkgd.min.js" | absURL }}"></script>
+<script src="{{ "js/imagesloaded.pkgd.min.js" | absURL }}"></script>
+
+<script src="{{ "js/bigger-picture.min.js" | absURL }}"></script>
+<script src="{{ "js/front.js" | absURL }}"></script>
+
+
+<script type="text/javascript">
+
+  // initialize
+  let bp = BiggerPicture({
+    target: document.body,
+  })
+
+  // grab image links
+  let imageLinks = document.querySelectorAll('.box-masonry > a.with-hover-icon')
+
+  // add click listener to open BiggerPicture
+  for (let link of imageLinks) {
+    link.addEventListener("click", openGallery);
+  }
+
+  // function to open BiggerPicture
+  function openGallery(e) {
+    e.preventDefault()
+    bp.open({
+      items: imageLinks,
+      el: e.currentTarget,
+    })
+  }
+
+</script>
